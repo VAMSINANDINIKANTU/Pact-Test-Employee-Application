@@ -1,0 +1,75 @@
+{
+    "provider": {
+        "name": "pactprovideremployee"
+    },
+    "consumer": {
+        "name": "employeeconsumer"
+    },
+    "interactions": [
+        {
+            "description": "get employee data not in database of provider",
+            "request": {
+                "method": "GET",
+                "path": "/api/EmployeeManagement/employee/9"
+            },
+            "response": {
+                "status": 200,
+                "body": {
+                    "Employee": [
+                        {
+                            "firstName": "pallavi",
+                            "lastName": "dasi",
+                            "fullName": "pallavidas",
+                            "salary": 19000,
+                            "department": "tester",
+                            "phone": "9978902443",
+                            "email": "pallavi.dasi@gmail.com",
+                            "address": "chennai",
+                            "Employer": [
+                                {
+                                    "employerName": "rahul",
+                                    "phoneNo": "9876543219",
+                                    "email": "rahul@gmail.com",
+                                    "address": "Bangolre"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "SomeState"
+                }
+            ]
+        },
+        {
+            "description": "get employee data",
+            "request": {
+                "method": "GET",
+                "path": "/api/EmployeeManagement/employee/3"
+            },
+            "response": {
+                "status": 200,
+                "body": {
+                    "firstName": "poulami",
+                    "lastName": "mohan",
+                    "fullName": "poulamimohan",
+                    "salary": 15000,
+                    "department": "ui",
+                    "phone": "8978902443",
+                    "email": "poulami@gmail.com",
+                    "address": "Bangolre"
+                }
+            }
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.14"
+        }
+    }
+}
