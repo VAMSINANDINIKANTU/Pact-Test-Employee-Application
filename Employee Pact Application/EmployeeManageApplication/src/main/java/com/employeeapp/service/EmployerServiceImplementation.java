@@ -4,7 +4,6 @@ import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.employeeapp.entities.Employee;
 import com.employeeapp.entities.Employer;
 import com.employeeapp.repository.EmployerRepository;
@@ -32,17 +31,12 @@ public class EmployerServiceImplementation implements EmployerService{
 
 	@Override
 	public Employer addEmployer(Employer employer) {
-		// TODO Auto-generated method stub
 		return repo.saveAndFlush(employer);
 		
 	}
 
 	@Override
 	public void deleteEmployer(Long employerId) {
-		// TODO Auto-generated method stub
 		repo.deleteById(employerId);
-		
 	}
-
-	
 }
