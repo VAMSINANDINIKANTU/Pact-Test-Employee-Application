@@ -8,6 +8,5 @@ public class EmployeeNotFoundException extends RuntimeException{
    public EmployeeNotFoundException(String name)
    {
 	   super("Employee name not found : " + name);
-	   
    }
 }
