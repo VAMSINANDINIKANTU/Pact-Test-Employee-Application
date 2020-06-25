@@ -14,7 +14,6 @@ import javax.persistence.Table;
 @Table(name = "employer_table_new")
 public class Employer {
 	@Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long employerId;
 	private String employerName;
 	private String phoneNo;
